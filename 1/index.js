@@ -1,7 +1,6 @@
 var fs = require('fs'); 
 var report;
 report = fs.readFileSync("report",'utf-8')
-// console.log(report)
 var rpa = report.split("\n")
 console.time()
 for (let i = 0; i < rpa.length; i++) {
