@@ -1,2 +1,0 @@
-never combine odd and even
-at least the second digit in *a* number has to be 1 or both 6
