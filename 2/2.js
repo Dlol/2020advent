@@ -7,6 +7,7 @@ var minmax
 var letter
 var pass
 var passcount = 0;
+console.time()
 ipa.forEach(element => {
     ipb[ipb.length] =  element.split(" ")
 });
@@ -18,7 +19,7 @@ for (let i = 0; i < ipb.length; i++) {
     const a = ipb[i];
     for (let o = 0; o < a.length; o++) {
         const s = a[o];
-        console.log(s)
+        // console.log(s)
         if(typeof s == 'object'){
             minmax = s
         }
@@ -29,13 +30,13 @@ for (let i = 0; i < ipb.length; i++) {
             pass = s
         }
     }
-    if ( checkPassword2(minmax,letter,pass) ) {
+    if ( checkPassword(minmax,letter,pass) ) {
         passcount ++
     }
 }
 
 console.log(passcount)
-
+console.timeEnd()
 function checkPassword(mm, l, p){
     let count = 0
     for (let i = 0; i < p.length; i++) {
